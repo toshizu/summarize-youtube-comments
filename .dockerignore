@@ -1,0 +1,9 @@
+# 不要なファイルの除外
+.venv/
+__pycache__/
+*.pyc
+.env
+tests/
+notebooks/
+.git/
+.gitignore

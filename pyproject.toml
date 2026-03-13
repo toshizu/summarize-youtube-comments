@@ -1,0 +1,32 @@
+[project]
+name = "summarize-youtube-comment"
+version = "0.1.0"
+description = "Youtube Data APIとGemini APIを活用したコメント分析ツール"
+authors = [
+    { name = "toshizu" },
+]
+
+readme = "README.md"
+dependencies = [
+    "python-dotenv",
+    "google-genai",
+    "google-api-python-client",
+    "google-auth-oauthlib",
+    "google-auth-httplib2",
+    "fastapi",
+    "uvicorn",
+    "pytube",
+    "pydantic-settings",
+    "streamlit"
+]
+requires-python = "~=3.12.0"
+
+[project.optional-dependencies]
+dev = [
+    "pip-tools",
+    "pytest",
+    "jupyterlab"
+]
+
+[tool.setuptools]
+packages = ["app"]
