@@ -62,10 +62,10 @@ def get_all_comments(video_id: str, youtube: Resource):
     next_page_token = None
 
     # テスト段階でリクエスト数を節約するためのカウンター変数
-    count = 0
+    # count = 0
     while True:
         # APIリクエスト処理...
-        count += 1
+        # count += 1
         
         # snippetのみを指定してクォータ消費を最小限に(1リクエスト=2点)
         request = youtube.commentThreads().list(
@@ -86,8 +86,8 @@ def get_all_comments(video_id: str, youtube: Resource):
 
         # 次のページがなければ、または5回(500件)に達したらループ終了
         # 動作確認ができたら、countを外せば全取得モードになる
-        if not next_page_token or count >= 1:
-            break
+        # if not next_page_token or count >= 5:
+        break
 
     return data
 
